@@ -5,16 +5,22 @@ matrix.sort(function(a, b){
 	return a- b;
 });
 
+function clear(){
+
+	document.getElementById("out").innerHTML= "";
+	matrix=[[]];
+}
+
 function progress(){
 	var txt = document.form.txt.value;
 	var line = txt.split("\n"); // 每一行內容
 	var line_num = line.length; // 共有幾行
 	for (var i = 0; i< line_num; i++){
+		matrix.clear;
 	    var seq = line[i].split(" "); //seq[0]: label名稱, seq[1] : context
 		// YOUR CODE START
-		
 		/* clean NaN */
-		// console.log(seq[0]);
+		console.log(seq[0]);
 		console.log(seq[1]);
 		if(seq[0]== "" || seq[1]== undefined || seq[1]== ""){
 
@@ -38,7 +44,7 @@ function progress(){
 		/* end */
 
 		/* clean matrix[0] */
-		if(!(i || matrix[0].length)){
+		if(matrix[0]= Array()){
 
 			matrix.shift();
 		}
@@ -77,7 +83,10 @@ function progress(){
 		out+= "</tr>";
 	}
 	/* end */
-	// console.log(out);
+
+	/* Clear Table */
+	clear();
+	/* end */
 
 	// YOUR CODE END
 	out=out+"</table>"
